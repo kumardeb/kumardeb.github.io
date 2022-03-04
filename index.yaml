@@ -16,6 +16,6 @@ entries:
     name: pages
     type: application
     urls:
-      - https://kumardeb.github.io/pages-1.0.0.tgz
+      - https://kumardeb.github.io/kumerdeb.github.io/pages-1.0.0.tgz
     version: 1.0.0
 generated: "2022-03-04T14:26:20.988740646Z"
