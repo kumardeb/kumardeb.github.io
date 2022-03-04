@@ -3,19 +3,19 @@ entries:
   pages:
   - apiVersion: v2
     appVersion: "1.0"
-    created: "2022-03-04T12:39:13.086654675Z"
+    created: "2022-03-04T14:26:20.992274886Z"
     dependencies:
     - name: pages-api
-      repository: https://localhost:8080
+      repository: https://kumardeb.github.io/kumerdeb.github.io/
       version: 1.x.x
     - name: mysql
-      repository: https://localhost:8080
+      repository: https://kumardeb.github.io/kumerdeb.github.io/
       version: 1.x.x
     description: A Helm chart for Pages Application
-    digest: 5f4b75d0010cc2ed61c02902308ae376d7e03b8b73f43a7e72cf3a45c2ffb1b1
+    digest: 9bf0bda8e9dc30952d18baeacd9de8841d2c2b8fe6feecc197cfd07bf02f4502
     name: pages
     type: application
     urls:
     - pages-1.0.0.tgz
     version: 1.0.0
-generated: "2022-03-04T12:39:13.08503725Z"
+generated: "2022-03-04T14:26:20.988740646Z"
