@@ -1,230 +1,189 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<title>Anaya</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
-body, html {
-  height: 100%;
-  color: #777;
-  line-height: 1.8;
-}
-
-/* Create a Parallax Effect */
-.bgimg-1, .bgimg-2, .bgimg-3 {
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-/* First image (Logo. Full height) */
-.bgimg-1 {
-  background-image: url('/w3images/parallax.jpg');
-  min-height: 100%;
-}
-
-/* Second image (Portfolio) */
-.bgimg-2 {
-  background-image: url("/w3images/parallax2.jpg");
-  min-height: 400px;
-}
-
-/* Third image (Contact) */
-.bgimg-3 {
-  background-image: url("/w3images/parallax3.jpg");
-  min-height: 400px;
-}
-
-.w3-wide {letter-spacing: 10px;}
-.w3-hover-opacity {cursor: pointer;}
-
-/* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-device-width: 1600px) {
-  .bgimg-1, .bgimg-2, .bgimg-3 {
-    background-attachment: scroll;
-    min-height: 400px;
-  }
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=K2D:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300i,400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+    crossorigin="anonymous">
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js"></script>
+  <title>CafeHub</title>
 </head>
+
 <body>
+  <div class="main">
+    <header class="wrapper">
+      <nav class="landing_top">
+        <div class="branding">
+          <a href="./index.html">
+            <h1><span>Cafe</span>Hub</h1>
+          </a>
+        </div>
 
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar" id="myNavbar">
-    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-      <i class="fa fa-bars"></i>
-    </a>
-    <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT ME</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
-    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
-      <i class="fa fa-search"></i>
-    </a>
-  </div>
+        <div class="menu_text">
+          <h3>MENU</h3>
+        </div>
 
-  
-</div>
+        <a href="javavscript:void(0)" class="menu" >
+          <i class="fas fa-bars fa-1x"></i>
+        </a>
 
-<!-- First Parallax Image with Logo Text -->
-<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
-  <div class="w3-display-middle" style="white-space:nowrap;">
-    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">MY <span class="w3-hide-small">WEBSITE</span> LOGO</span>
-  </div>
-</div>
+        <div id="nav_items" class="nav_bar">
+          <ul>
+            <li><a href="javascript:void(0)" class="close_btn" >&times;</a></li>
+            <input type="text" placeholder="Search...">
+            <button><i class="fas fa-search"></i></button>
+            <div class="nav_links">
+              <li><a href="index.html">home</a></li>
+              <li><a href="blogs.html">blogs</a></li>
+              <li><a href="#">about me</a></li>
+              <li><a href="#">contact me</a></li>
+            </div>
+          </ul>
+        </div>
+      </nav>
 
-<!-- Container (About Section) -->
-<div class="w3-content w3-container w3-padding-64" id="about">
-  <h3 class="w3-center">ABOUT ME</h3>
-  <p class="w3-center"><em>I love history</em></p>
-  <p>Blah blah blah about me.</p>
-  <div class="w3-row">
-    <div class="w3-col m6 w3-center w3-padding-large">
-      <p><b><i class="fa fa-user w3-margin-right"></i>My Name</b></p><br>
-      <img src="/w3images/avatar_hat.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">
-    </div>
-
-    <!-- Hide this text on small devices -->
-    <div class="w3-col m6 w3-hide-small w3-padding-large">
-      <p>Welcome to my website. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
-        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-  </div>
-  <p class="w3-large w3-center w3-padding-16">Im really good at:</p>
-  <p class="w3-wide"><i class="fa fa-camera"></i>Photography</p>
-  <div class="w3-light-grey">
-    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
-  </div>
-  <p class="w3-wide"><i class="fa fa-laptop"></i>Web Design</p>
-  <div class="w3-light-grey">
-    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:85%">85%</div>
-  </div>
-  <p class="w3-wide"><i class="fa fa-photo"></i>Photoshop</p>
-  <div class="w3-light-grey">
-    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:75%">75%</div>
-  </div>
-</div>
-
-<div class="w3-row w3-center w3-dark-grey w3-padding-16">
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">14+</span><br>
-    Partners
-  </div>
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">55+</span><br>
-    Projects Done
-  </div>
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">89+</span><br>
-    Happy Clients
-  </div>
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">150+</span><br>
-    Meetings
-  </div>
-</div>
-
-<!-- Modal for full size images on click-->
-<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
-  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
-  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-    <img id="img01" class="w3-image">
-    <p id="caption" class="w3-opacity w3-large"></p>
-  </div>
-</div>
-
-<!-- Third Parallax Image with Portfolio Text -->
-<div class="bgimg-3 w3-display-container w3-opacity-min">
-  <div class="w3-display-middle">
-     <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
-  </div>
-</div>
-
-<!-- Container (Contact Section) -->
-<div class="w3-content w3-container w3-padding-64" id="contact">
-  <h3 class="w3-center">WHERE I WORK</h3>
-  <p class="w3-center"><em>I'd love your feedback!</em></p>
-
-  <div class="w3-row w3-padding-32 w3-section">
-    <div class="w3-col m4 w3-container">
-      <img src="/w3images/map.jpg" class="w3-image w3-round" style="width:100%">
-    </div>
-    <div class="w3-col m8 w3-panel">
-      <div class="w3-large w3-margin-bottom">
-        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Singapore, Singapore<br>
-        <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +65 12345678<br>
-        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: t446499@gmail.com<br>
-      </div>
-      <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
-      <form action="/action_page.php" target="_blank">
-        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-          <div class="w3-half">
-            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+      <section class="landing_bottom">
+        <div class="showcase">
+          <div class="large_text">
+            <h1><span>Cafe</span>Hub</h1>
           </div>
-          <div class="w3-half">
-            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+          <div class="small_text">
+            <h3>We make the most <b>Tasty</b> blogs about <span class="coffee">coffee.</span></h3>
           </div>
         </div>
-        <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
-        <button class="w3-button w3-black w3-right w3-section" type="submit">
-          <i class="fa fa-paper-plane"></i> SEND MESSAGE
-        </button>
-      </form>
+        <div class="expresso">
+          <h3>Expresso</h3>
+          <a href="#slogan"><i class="fas fa-arrow-circle-down fa-3x"></i></a>
+        </div>
+      </section>
+    </header>
+
+    <section>
+      <div id="slogan">
+        <h1 class="slogan_coffee">Coffee...</h1>
+        <div class="line_break"></div>
+        <h3 class="slogan_text">A lot can happen over coffee</h3>
+      </div>
+    </section>
+
+    <!-- Blogs -->
+
+    <section class="featured_blogs">
+      <div class="blog_right">
+        <div><img src="https://source.unsplash.com/02MLReRp3I8/4180 × 2792" alt="" class="test"></div>
+        <div class="info">
+          <h2>This is the blog Heading</h2>
+          <p>Steamed to go latte filter shop sweet sugar robusta siphon. Strong half and half, coffee affogato, blue
+            mountain extraction cultivar strong brewed body. Single origin siphon that to go, aroma saucer fair trade
+            java turkish. And, fair trade, a flavour dark est body doppio[...]</p>
+          <a href="#" class="continue_btn">Continue Reading</a>
+        </div>
+      </div>
+      <div class="blog_left">
+        <div><img src="https://source.unsplash.com/_QfGWOtITaM/3264 × 4896" alt=""></div>
+        <div class="info">
+          <h2>This is the blog Heading</h2>
+          <p>Beans, filter medium percolator robusta turkish affogato viennese cinnamon half and half saucer. Cream,
+            flavour that siphon cappuccino caffeine robust. Ut that carajillo coffee, crema, con panna a grounds id
+            pumpkin
+            spice. Chicory grounds sweet plunger pot saucer wings crema steamed siphon[...]</p>
+          <a href="#" class="continue_btn">Continue Reading</a>
+        </div>
+      </div>
+      <div class="blog_right">
+        <div><img src="https://source.unsplash.com/obV_LM0KjxY/4096 × 2730" alt=""></div>
+        <div class="info">
+          <h2>This is the blog Heading</h2>
+          <p>Mug est so cultivar medium iced coffee. Half and half to go cinnamon galão grounds arabica chicory. Milk,
+            black, aged, arabica strong, ristretto brewed strong brewed barista and beans[...]</p>
+          <a href="#" class="continue_btn">Continue Reading</a>
+        </div>
+      </div>
+      <div class="blog_left">
+        <div><img src="https://source.unsplash.com/KgziKKUyJVA/5760 × 3840" alt=""></div>
+        <div class="info">
+          <h2>This is the blog Heading</h2>
+          <p>Cream grounds white, extraction chicory dripper aged ristretto so saucer. Plunger pot, siphon affogato
+            white,
+            milk instant ristretto doppio robusta[...]</p>
+          <a href="#" class="continue_btn">Continue Reading</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fun Facts -->
+
+    <section class="fun_facts">
+      <h1>Fun Facts about <span>Coffee</span></h1>
+      <div class="facts">
+        <div class="fact">
+          <h2>Heading</h2>
+          <p>Extra cultivar grounds siphon single shot trifecta cultivar. Plunger pot strong, cream in, white grinder,
+            grounds, espresso cappuccino mocha redeye trifecta.</p>
+        </div>
+        <div class="fact">
+          <h2>Heading</h2>
+          <p>Extra cultivar grounds siphon single shot trifecta cultivar. Plunger pot strong, cream in, white grinder,
+            grounds, espresso cappuccino mocha redeye trifecta.</p>
+        </div>
+        <div class="fact">
+          <h2>Heading</h2>
+          <p>Extra cultivar grounds siphon single shot trifecta cultivar. Plunger pot strong, cream in, white grinder,
+            grounds, espresso cappuccino mocha redeye trifecta.</p>
+        </div>
+        <div class="fact">
+          <h2>Heading</h2>
+          <p>Extra cultivar grounds siphon single shot trifecta cultivar. Plunger pot strong, cream in, white grinder,
+            grounds, espresso cappuccino mocha redeye trifecta.</p>
+        </div>
+        <div class="fact">
+          <h2>Heading</h2>
+          <p>Extra cultivar grounds siphon single shot trifecta cultivar. Plunger pot strong, cream in, white grinder,
+            grounds, espresso cappuccino mocha redeye trifecta.</p>
+        </div>
+        <div class="fact">
+          <h2>Heading</h2>
+          <p>Extra cultivar grounds siphon single shot trifecta cultivar. Plunger pot strong, cream in, white grinder,
+            grounds, espresso cappuccino mocha redeye trifecta.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="login">
+        <h3>Login/Sign Up</h3>
+        <p><b>Login</b> or <b>Sign Up</b> to have full access to the site</p>
+        <div class="buttons">
+          <a class="login_btn button">Login</a></div>
+        <a class="sign_up button">Sign Up</a>
+      </div>
+  </div>
+  </section>
+
+  <footer>
+    <div class="box">
+      <div class="social_media">
+        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="#" target="_blank"><i class="fas fa-envelope"></i></a>
+      </div>
     </div>
+    <div class="credits">
+      <h3>&copy;Kamal Teja | Image source: <a href="https://source.unsplash.com" target="_blank">Unsplash</a></h3>
+    </div>
+  </footer>
   </div>
-</div>
-
-<!-- Footer -->
-<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
-  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-  <div class="w3-xlarge w3-section">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
-  </div>
-  
-</footer>
- 
-<script>
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
-
-// Change style of navbar on scroll
-window.onscroll = function() {myFunction()};
-function myFunction() {
-    var navbar = document.getElementById("myNavbar");
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
-    } else {
-        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
-    }
-}
-
-// Used to toggle the menu on small screens when clicking on the menu button
-function toggleFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-    } else {
-        x.className = x.className.replace(" w3-show", "");
-    }
-}
-</script>
-
 </body>
-</html>
 
+</html>
